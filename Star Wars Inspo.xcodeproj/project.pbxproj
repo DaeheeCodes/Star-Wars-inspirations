@@ -11,6 +11,10 @@
 		EBBB53D329086E46008FC99F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53D229086E46008FC99F /* ContentView.swift */; };
 		EBBB53D529086E49008FC99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53D429086E49008FC99F /* Assets.xcassets */; };
 		EBBB53D829086E49008FC99F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53D729086E49008FC99F /* Preview Assets.xcassets */; };
+		EBBB53DF29086F5F008FC99F /* Database.json in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53DE29086F5F008FC99F /* Database.json */; };
+		EBBB53E329088E3F008FC99F /* SlidesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53E229088E3F008FC99F /* SlidesModel.swift */; };
+		EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53EA29089ECA008FC99F /* DataManager.swift */; };
+		EBBB53EF2908BE3E008FC99F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53EE2908BE3E008FC99F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		EBBB53D229086E46008FC99F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBBB53D429086E49008FC99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBBB53D729086E49008FC99F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBBB53DE29086F5F008FC99F /* Database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Database.json; sourceTree = "<group>"; };
+		EBBB53E229088E3F008FC99F /* SlidesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesModel.swift; sourceTree = "<group>"; };
+		EBBB53EA29089ECA008FC99F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EBBB53EE2908BE3E008FC99F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 		EBBB53C429086E46008FC99F = {
 			isa = PBXGroup;
 			children = (
+				EBBB53EE2908BE3E008FC99F /* README.md */,
 				EBBB53CF29086E46008FC99F /* Star Wars Inspo */,
 				EBBB53CE29086E46008FC99F /* Products */,
 			);
@@ -55,6 +64,9 @@
 				EBBB53D229086E46008FC99F /* ContentView.swift */,
 				EBBB53D429086E49008FC99F /* Assets.xcassets */,
 				EBBB53D629086E49008FC99F /* Preview Content */,
+				EBBB53DE29086F5F008FC99F /* Database.json */,
+				EBBB53E229088E3F008FC99F /* SlidesModel.swift */,
+				EBBB53EA29089ECA008FC99F /* DataManager.swift */,
 			);
 			path = "Star Wars Inspo";
 			sourceTree = "<group>";
@@ -127,6 +139,8 @@
 			files = (
 				EBBB53D829086E49008FC99F /* Preview Assets.xcassets in Resources */,
 				EBBB53D529086E49008FC99F /* Assets.xcassets in Resources */,
+				EBBB53EF2908BE3E008FC99F /* README.md in Resources */,
+				EBBB53DF29086F5F008FC99F /* Database.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBB53E329088E3F008FC99F /* SlidesModel.swift in Sources */,
+				EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */,
 				EBBB53D329086E46008FC99F /* ContentView.swift in Sources */,
 				EBBB53D129086E46008FC99F /* Star_Wars_InspoApp.swift in Sources */,
 			);
