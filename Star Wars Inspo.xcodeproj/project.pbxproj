@@ -15,6 +15,8 @@
 		EBBB53E329088E3F008FC99F /* SlidesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53E229088E3F008FC99F /* SlidesModel.swift */; };
 		EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53EA29089ECA008FC99F /* DataManager.swift */; };
 		EBBB53EF2908BE3E008FC99F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53EE2908BE3E008FC99F /* README.md */; };
+		EBBB53F12909A5B0008FC99F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F02909A5B0008FC99F /* NetworkManager.swift */; };
+		EBBB53F52909AAE2008FC99F /* imgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F42909AAE2008FC99F /* imgModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		EBBB53E229088E3F008FC99F /* SlidesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesModel.swift; sourceTree = "<group>"; };
 		EBBB53EA29089ECA008FC99F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EBBB53EE2908BE3E008FC99F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EBBB53F02909A5B0008FC99F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EBBB53F42909AAE2008FC99F /* imgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				EBBB53DE29086F5F008FC99F /* Database.json */,
 				EBBB53E229088E3F008FC99F /* SlidesModel.swift */,
 				EBBB53EA29089ECA008FC99F /* DataManager.swift */,
+				EBBB53F02909A5B0008FC99F /* NetworkManager.swift */,
+				EBBB53F42909AAE2008FC99F /* imgModel.swift */,
 			);
 			path = "Star Wars Inspo";
 			sourceTree = "<group>";
@@ -152,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBB53E329088E3F008FC99F /* SlidesModel.swift in Sources */,
+				EBBB53F52909AAE2008FC99F /* imgModel.swift in Sources */,
 				EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */,
+				EBBB53F12909A5B0008FC99F /* NetworkManager.swift in Sources */,
 				EBBB53D329086E46008FC99F /* ContentView.swift in Sources */,
 				EBBB53D129086E46008FC99F /* Star_Wars_InspoApp.swift in Sources */,
 			);

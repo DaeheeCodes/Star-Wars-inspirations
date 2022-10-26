@@ -50,4 +50,6 @@ class DataManager: ObservableObject {
         let t = type(of: value)
         print("'\(value)' of type '\(t)'")
     }
+    
+
 }
