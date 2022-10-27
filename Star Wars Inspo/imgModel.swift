@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct imgModel: Codable {
+struct imgModel: Codable{
         var links: Links
 }
 
