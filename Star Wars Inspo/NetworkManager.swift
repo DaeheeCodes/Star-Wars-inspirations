@@ -12,8 +12,11 @@ import SwiftUI
 //@MainActor for concurrency, updates to main thread automatically.
 
 @MainActor class NetworkManager: ObservableObject{
-    
+    //Fetch Image Data
     @Published var imageModels = [imgModel]()
+    //Publish Image Data
+    @Published var image: UIImage?
+
     let apiKey = Bundle.main.object(forInfoDictionaryKey: "UNSPLASH_API") as! String
     
     init() {

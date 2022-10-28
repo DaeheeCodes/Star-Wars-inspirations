@@ -6,7 +6,7 @@
 
     "author": "Leia Organa",
 
-    "slideTransitionDelay": 5
+    "slideTransitionDelay": 10
 
   },
 
@@ -16,7 +16,7 @@
 
     "author": "Obi-Wan Kenobi",
 
-    "slideTransitionDelay": 5
+    "slideTransitionDelay": 10
 
   },
 
@@ -26,7 +26,7 @@
 
     "author": "Han Solo",
 
-    "slideTransitionDelay": 5
+    "slideTransitionDelay": 10
 
   },
 
