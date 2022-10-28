@@ -19,7 +19,7 @@
 		EBBB53F52909AAE2008FC99F /* imgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F42909AAE2008FC99F /* imgModel.swift */; };
 		EBBB53F7290A2E5F008FC99F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53F6290A2E5E008FC99F /* Config.xcconfig */; };
 		EBBB53FA290B67BF008FC99F /* SlidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */; };
-		EBDF6087290C4EE200661036 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDF6086290C4EE200661036 /* URLImageModel.swift */; };
+		EBDF6089290C624000661036 /* URLimageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDF6088290C624000661036 /* URLimageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		EBBB53F6290A2E5E008FC99F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		EBBB53F8290A3272008FC99F /* Star-Wars-Inspo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Star-Wars-Inspo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesViewModel.swift; sourceTree = "<group>"; };
-		EBDF6086290C4EE200661036 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
+		EBDF6088290C624000661036 /* URLimageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLimageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				EBBB53F02909A5B0008FC99F /* NetworkManager.swift */,
 				EBBB53F42909AAE2008FC99F /* imgModel.swift */,
 				EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */,
-				EBDF6086290C4EE200661036 /* URLImageModel.swift */,
+				EBDF6088290C624000661036 /* URLimageManager.swift */,
 			);
 			path = "Star Wars Inspo";
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 				EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */,
 				EBBB53FA290B67BF008FC99F /* SlidesViewModel.swift in Sources */,
 				EBBB53F12909A5B0008FC99F /* NetworkManager.swift in Sources */,
-				EBDF6087290C4EE200661036 /* URLImageModel.swift in Sources */,
+				EBDF6089290C624000661036 /* URLimageManager.swift in Sources */,
 				EBBB53D329086E46008FC99F /* ContentView.swift in Sources */,
 				EBBB53D129086E46008FC99F /* Star_Wars_InspoApp.swift in Sources */,
 			);

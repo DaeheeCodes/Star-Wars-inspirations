@@ -108,8 +108,9 @@ struct ContentView: View {
                         Spacer()
                         Toggle(isOn: $idleTimerDisabled)
                         {
+                            Text("Frame Mode")
                         }
-                        .toggleStyle(.button).tint(.blue).confirmationDialog( "Picture Frame Mode On",
+                        .toggleStyle(.button).tint(.blue).confirmationDialog( "",
                                                                               isPresented: $idleTimerDisabled) {
                             Button("Phone Will Now Stay Awake", role: .destructive) {
                                 idleTimerDisabled = true
@@ -122,14 +123,10 @@ struct ContentView: View {
                             
                         }
                         Spacer()
-                    }.frame(
-                        maxWidth: gp.size.width,
-                        maxHeight: 35,
-                        alignment: .center)
+                    }
                     .background(Color.white)
                     }
                 }.position(x: gp.size.width * 0.5, y: gp.size.height * 0.5)
-                
             }
         }.onReceive(timer) {
             time in

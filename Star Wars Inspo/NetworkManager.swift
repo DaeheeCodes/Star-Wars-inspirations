@@ -12,11 +12,12 @@ import SwiftUI
 //@MainActor for concurrency, updates to main thread automatically.
 
 @MainActor class NetworkManager: ObservableObject{
-    //Fetch Image Data
+    //Fetch and load images URL
     @Published var imageModels = [imgModel]()
     //Publish Image Data
     @Published var image: UIImage?
-
+    var url: String?
+    
     let apiKey = Bundle.main.object(forInfoDictionaryKey: "UNSPLASH_API") as! String
     
     init() {
@@ -34,7 +35,7 @@ import SwiftUI
         print(url)
         let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let error = error {
-                print("Error fetching recipes: \(error.localizedDescription)")
+                print("Error fetching images: \(error.localizedDescription)")
             }
             
             guard let jsonData = data else { return }
@@ -51,6 +52,6 @@ import SwiftUI
             }
         }
         dataTask.resume()
-    }
-    
+ }
+
 }
