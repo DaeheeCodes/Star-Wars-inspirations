@@ -17,11 +17,11 @@ class DataManager: ObservableObject {
     }
     //units of small functions for scaleability and accessibility.
     // for example we can expand loadData to any other databases if we were to scale for different themes.
-     func loadData(_ filename: String) -> Data? {
+    func loadData(_ filename: String) -> Data? {
         guard let file = Bundle.main.url(forResource: filename, withExtension: "json")
-            else {
+        else {
             //allows us to catch specific error statements, better than the standar JSON decoding method
-                fatalError("File \"\(filename)\" does not exist in main bundle.")
+            fatalError("File \"\(filename)\" does not exist in main bundle.")
         }
         
         do {
@@ -39,7 +39,7 @@ class DataManager: ObservableObject {
         //expand scale using case statements to different models and structs.
         //make protocols and build different functions that follow the protocol.
         do {
-           let slides = try JSONDecoder().decode(model.self, from: data)
+            let slides = try JSONDecoder().decode(model.self, from: data)
             self.slidesModel = slides as! [SlidesModel]
         } catch {
             fatalError("Failed to decode \"\(data)\" as \(model.self)):\n\(error)")
@@ -51,5 +51,5 @@ class DataManager: ObservableObject {
         print("'\(value)' of type '\(t)'")
     }
     
-
+    
 }

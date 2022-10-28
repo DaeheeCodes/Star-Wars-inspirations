@@ -13,41 +13,41 @@ import SwiftUI
 
 @MainActor class NetworkManager: ObservableObject{
     
-@Published var imageModels = [imgModel]()
+    @Published var imageModels = [imgModel]()
     let apiKey = Bundle.main.object(forInfoDictionaryKey: "UNSPLASH_API") as! String
     
     init() {
         fetchImg("9860299")
     }
     
-//units of small functions for scaleability and accessibility.
-// for example we can expand loadData to any other databases if we were to scale for different themes.
- func fetchImg(_ query: String) {
-     guard let url = URL(string: "https://api.unsplash.com/collections/\(query)/photos?client_id=\(apiKey)" )
+    //units of small functions for scaleability and accessibility.
+    // for example we can expand loadData to any other databases if we were to scale for different themes.
+    func fetchImg(_ query: String) {
+        guard let url = URL(string: "https://api.unsplash.com/collections/\(query)/photos?client_id=\(apiKey)" )
         else {
-        //allows us to catch specific error statements, better than the standar JSON decoding method
+            //allows us to catch specific error statements, better than the standar JSON decoding method
             fatalError("Invalid URL at \"\(query)\" .")
+        }
+        print(url)
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                print("Error fetching recipes: \(error.localizedDescription)")
+            }
+            
+            guard let jsonData = data else { return }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let response = try decoder.decode([imgModel].self, from: jsonData)
+                print(response)
+                self.imageModels = response
+            } catch {
+                //Expected to decode Array<Any> but found a dictionary instead.
+                print("Error decoding data. \(error)")
+            }
+        }
+        dataTask.resume()
     }
-     print(url)
-     let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
-       if let error = error {
-         print("Error fetching recipes: \(error.localizedDescription)")
-       }
-       
-       guard let jsonData = data else { return }
-       
-       let decoder = JSONDecoder()
-       
-       do {
-         let response = try decoder.decode([imgModel].self, from: jsonData)
-           print(response)
-           self.imageModels = response
-       } catch {
-           //Expected to decode Array<Any> but found a dictionary instead.
-         print("Error decoding data. \(error)")
-       }
-     }
-     dataTask.resume()
-         }
-
+    
 }

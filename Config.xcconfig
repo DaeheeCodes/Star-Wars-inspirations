@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  Star Wars Inspo
+//
+//  Created by DHC on 10/26/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+UNSPLASH_API = 1D1wmDROSEx9jh7G7H6dY7bp_ijAiAc-r8bWSWSliLo
