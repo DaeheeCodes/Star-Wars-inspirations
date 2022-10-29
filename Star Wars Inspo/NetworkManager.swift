@@ -15,8 +15,6 @@ import SwiftUI
     //Fetch and load images URL
     @Published var imageModels = [imgModel]()
     //Publish Image Data
-    @Published var image: UIImage?
-    var url: String?
     
     let apiKey = Bundle.main.object(forInfoDictionaryKey: "UNSPLASH_API") as! String
     
@@ -53,5 +51,4 @@ import SwiftUI
         }
         dataTask.resume()
  }
-
 }

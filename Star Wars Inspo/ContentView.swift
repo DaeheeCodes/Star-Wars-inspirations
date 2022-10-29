@@ -35,13 +35,17 @@ struct ContentView: View {
     
     var body: some View {
         
+        
+        
         //timer gets the value from "slideTransitionDelay"
         let timer = Timer.publish(every: Double(slideShows.slidesModel[counter].slideTransitionDelay), on: .main, in: .common).autoconnect()
         let current = slideShows.slidesModel[counter]
+        
         //GeometryReader to adjust view sizes based on current screen size and ratio.
         GeometryReader { gp in
+            let landscape = (gp.size.width > gp.size.height)
             ZStack {
-                if (images.imageModels.count > 0) {
+                        if (images.imageModels.count > 0) {
                     AsyncImage(url: URL(string: images.imageModels[counter].links.download ),
                                content: { image in
                         image
@@ -55,24 +59,21 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.all)
                     .frame(width: gp.size.width, height: gp.size.height, alignment: .center)
                 }
-                if ( gp.size.width > gp.size.height) {
+                if (landscape) {
                     Image(current.author)
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: gp.size.width * 0.4, height: gp.size.height * 0.5, alignment: .topTrailing)
-                        .cornerRadius(90.0)
-                        .opacity(0.6)
-                        .position(x: gp.size.width * 0.8, y: gp.size.height * 0.25)
+                        //.scaledToFill()
+                        .frame(width: gp.size.width * 0.4, height: gp.size.height * 0.4, alignment: .topTrailing)
+                        .cornerRadius(15.0)
+                        .position(x: gp.size.width * 0.2, y: gp.size.height * 0.25)
                 }
                 else {
-                    //There no free APIs for Star Wars characters but in professional build these will be programmatically pulled from an API.
+                    //There no free APIs for Star Wars characters but in commercial build these will be programmatically pulled from an API.
                     Image(current.author)
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: gp.size.width * 0.45, height: gp.size.height * 0.4, alignment: .topTrailing)
-                        .cornerRadius(90.0)
-                        .opacity(0.6)
-                        .position(x: gp.size.width * 0.8, y: gp.size.height * 0.2)
+                        .frame(width: gp.size.width * 0.5, height: gp.size.height * 0.35, alignment: .topTrailing)
+                        .cornerRadius(15.0)
+                        .position(x: gp.size.width * 0.23, y: gp.size.height * 0.2)
                 }
                 Spacer()
                 VStack{
@@ -102,31 +103,29 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         Button(action: goBackward) {
-                            Image(systemName: "chevron.left")
+                            Image(systemName: "arrowtriangle.left.fill")
                                 .imageScale(.large)
                         }
                         Spacer()
-                        Toggle(isOn: $idleTimerDisabled)
+                        Button(idleTimerDisabled ? "Frame Mode On" : "Frame Mode Off")
                         {
-                            Text("Frame Mode")
-                        }
-                        .toggleStyle(.button).tint(.blue).confirmationDialog( "",
-                                                                              isPresented: $idleTimerDisabled) {
-                            Button("Phone Will Now Stay Awake", role: .destructive) {
-                                idleTimerDisabled = true
-                            }
+                            idleTimerDisabled.toggle()
                         }
                         Spacer()
                         Button(action: goForward){
-                            Image(systemName: "chevron.right")
+                            Image(systemName: "arrowtriangle.right.fill")
                                 .imageScale(.large)
                             
                         }
                         Spacer()
-                    }
+                    }.frame(
+                        maxWidth: gp.size.width,
+                        maxHeight: 35,
+                        alignment: .center)
                     .background(Color.white)
                     }
                 }.position(x: gp.size.width * 0.5, y: gp.size.height * 0.5)
+                
             }
         }.onReceive(timer) {
             time in
