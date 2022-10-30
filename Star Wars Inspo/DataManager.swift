@@ -15,12 +15,12 @@ class DataManager: ObservableObject {
     init() {
         loadJSON(loadData("Database")!, [SlidesModel].self)
     }
-    //units of small functions for scaleability and accessibility.
-    // for example we can expand loadData to any other databases if we were to scale for different themes.
+    //Uses units of small functions for scaleability and accessibility.
+    // For example we can feed any filename to loadData on any other databases if we were to scale for different themes.
     func loadData(_ filename: String) -> Data? {
         guard let file = Bundle.main.url(forResource: filename, withExtension: "json")
         else {
-            //allows us to catch specific error statements, better than the standar JSON decoding method
+            //Allows us to catch specific error statements, better than the standar JSON decoding method
             fatalError("File \"\(filename)\" does not exist in main bundle.")
         }
         
@@ -30,14 +30,9 @@ class DataManager: ObservableObject {
             fatalError("Failed to load \"\(filename)\" from main bundle:\n\(error)")
         }
     }
-    /*
-     we need input image url and background img url here
-     */
     
     
     func loadJSON<T: Codable>(_ data: Data,_ model: T.Type){
-        //expand scale using case statements to different models and structs.
-        //make protocols and build different functions that follow the protocol.
         do {
             let slides = try JSONDecoder().decode(model.self, from: data)
             self.slidesModel = slides as! [SlidesModel]

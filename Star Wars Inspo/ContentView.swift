@@ -12,10 +12,13 @@ struct ContentView: View {
     
     @State private var idleTimerDisabled = false
     @State private var showPopup = false
-    @State private var shownPopup = true
+    // Show only once per active session.
+    @State private var notShownPopup = true
     @State private var counter = 0
     @State private var showAlert = false
     @State var showMenu: Bool = true
+    @Environment(\.scenePhase) private var scenePhase
+
 
     //Feeds to the toggler to disable or enable idleTimerDisabled which allows users to force the phone to stay awake.
     func idleTimer() {
@@ -39,7 +42,7 @@ struct ContentView: View {
     
     var body: some View {
     
-        //timer gets the value from "slideTransitionDelay"
+        //Timer gets the value from "slideTransitionDelay"
         let timer = Timer.publish(every: Double(slideShows.slidesModel[counter].slideTransitionDelay), on: .main, in: .common).autoconnect()
         let current = slideShows.slidesModel[counter]
         //GeometryReader to adjust view sizes based on current screen size and ratio.
@@ -124,6 +127,7 @@ struct ContentView: View {
                             maxWidth: (gp.size.width * 0.9),
                             maxHeight: (gp.size.height * 0.95),
                             alignment: .bottomTrailing)
+                    //Menu can be hidden if the above view is clicked
                     if (showMenu) {
                     HStack {
                         Spacer()
@@ -135,13 +139,13 @@ struct ContentView: View {
                         Button(idleTimerDisabled ? "Frame Mode On" : "Frame Mode Off")
                         {
                             idleTimerDisabled.toggle()
-                            if (idleTimerDisabled && shownPopup) {
+                            if (idleTimerDisabled && notShownPopup) {
                                 showPopup = true
                             }
                         }
                         .confirmationDialog("", isPresented: $showPopup) {
                                 Button("Screen will now Stay On", role: .destructive, action: {
-                                    shownPopup = false })
+                                    notShownPopup = false })
                               }
                         Spacer()
                         Button(action: goForward){
@@ -170,7 +174,19 @@ struct ContentView: View {
             }
         }.onTapGesture {
             showMenu.toggle()
-        }
+            //Release Network Cache when it goes to background.
+        }.onChange(of: scenePhase) { phase in
+            if phase == .background {
+                URLCache.shared.removeAllCachedResponses()
+                URLCache.shared.diskCapacity = 0
+                URLCache.shared.memoryCapacity = 0
+            }
+            //Show warning again if the user session was previously ended.
+            
+            if phase == .active {
+                notShownPopup = true
+            }
+            }
         
     }
     

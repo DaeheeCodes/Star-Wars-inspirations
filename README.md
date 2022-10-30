@@ -4,10 +4,11 @@
 
 ----------------------
 ## Mission
-Develop an application that is able to read a JSON database and represent that as slideshow.
+My mission was to develop a professional application that is able to read a JSON database and represent that as slideshow.
+
+The main focus of the project was to build an application that follows the SOLID principle to deliver an package that is extensible and maintainable
 
 ## Core Project
-The main focus of the project was to build an application that follows the SOLID principle to deliver an package that is extensible and maintainable - Professional.
 
 This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorhythms that are reuseable in any SwiftUI projects.
 

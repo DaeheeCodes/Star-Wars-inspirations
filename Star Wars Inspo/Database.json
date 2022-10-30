@@ -6,7 +6,7 @@
 
     "author": "Leia Organa",
 
-    "slideTransitionDelay": 3000
+    "slideTransitionDelay": 3
 
   },
 
@@ -16,7 +16,7 @@
 
     "author": "Obi-Wan Kenobi",
 
-    "slideTransitionDelay": 2000
+    "slideTransitionDelay": 3
 
   },
 
@@ -36,7 +36,7 @@
 
     "author": "Yoda",
 
-    "slideTransitionDelay": 2000
+    "slideTransitionDelay": 3
 
   }
 

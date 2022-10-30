@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SlidesModel: Codable, Identifiable {
     
+    //JSON naming convention was straight forward but we can always switch it with Enums
     enum CodingKeys: CodingKey {
            case quote
            case author
