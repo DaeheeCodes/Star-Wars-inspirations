@@ -11,6 +11,8 @@ The main focus of the project was to build an application that follows the SOLID
 
 This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorhythms that are reuseable in any SwiftUI projects.
 
+It also follows common naming convention to conform to the accessibility features of the iOS. 
+
 The following is a breakdown of the project.
 
 
@@ -22,4 +24,4 @@ The following is a breakdown of the project.
 * DataManager(ViewModel + Controller) - Parses API data
     *    func fetchImg(url Query) -> Data
     *    let apiKey - custom BASH saved to Info.plist
-* imgModel
+* imgModel1

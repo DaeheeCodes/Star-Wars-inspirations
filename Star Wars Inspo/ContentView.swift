@@ -11,6 +11,8 @@ struct ContentView: View {
     @ObservedObject var slideShows = DataManager()
     
     @State private var idleTimerDisabled = false
+    @State private var showPopup = false
+    @State private var shownPopup = true
     @State private var counter = 0
     @State private var showAlert = false
     @State var showMenu: Bool = true
@@ -19,6 +21,10 @@ struct ContentView: View {
     func idleTimer() {
         idleTimerDisabled ? (UIApplication.shared.isIdleTimerDisabled = true) : (UIApplication.shared.isIdleTimerDisabled = false)
     }
+    
+    //determine if iPad or iPhone
+    private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
+
     //UI specific Helper methods
     func goForward () {
         if ((counter + 1) != slideShows.slidesModel.count) {
@@ -31,16 +37,11 @@ struct ContentView: View {
         }
     }
     
-    // async load DispatchGroup
-    
     var body: some View {
-        
-        
-        
+    
         //timer gets the value from "slideTransitionDelay"
         let timer = Timer.publish(every: Double(slideShows.slidesModel[counter].slideTransitionDelay), on: .main, in: .common).autoconnect()
         let current = slideShows.slidesModel[counter]
-        
         //GeometryReader to adjust view sizes based on current screen size and ratio.
         GeometryReader { gp in
             let landscape = (gp.size.width > gp.size.height)
@@ -58,22 +59,47 @@ struct ContentView: View {
                     })
                     .edgesIgnoringSafeArea(.all)
                     .frame(width: gp.size.width, height: gp.size.height, alignment: .center)
-                }
+                        }
                 if (landscape) {
+                    if (idiom == .pad) {
                     Image(current.author)
                         .resizable()
-                        //.scaledToFill()
                         .frame(width: gp.size.width * 0.4, height: gp.size.height * 0.4, alignment: .topTrailing)
+                        .aspectRatio(1, contentMode: .fit)
                         .cornerRadius(15.0)
-                        .position(x: gp.size.width * 0.2, y: gp.size.height * 0.25)
+                        .position(x: gp.size.width * 0.25, y: gp.size.height * 0.25)
+                        .opacity(0.9)
+                }
+                    else {
+                        Image(current.author)
+                            .resizable()
+                            .frame(width: gp.size.width * 0.3, height: gp.size.height * 0.4, alignment: .topTrailing)
+                            .aspectRatio(1, contentMode: .fit)
+                            .cornerRadius(15.0)
+                            .position(x: gp.size.width * 0.2, y: gp.size.height * 0.25)
+                            .opacity(0.9)
+                    }
                 }
                 else {
                     //There no free APIs for Star Wars characters but in commercial build these will be programmatically pulled from an API.
+                    if (idiom == .pad) {
                     Image(current.author)
                         .resizable()
                         .frame(width: gp.size.width * 0.5, height: gp.size.height * 0.35, alignment: .topTrailing)
+                        .aspectRatio(1, contentMode: .fit)
                         .cornerRadius(15.0)
-                        .position(x: gp.size.width * 0.23, y: gp.size.height * 0.2)
+                        .position(x: gp.size.width * 0.3, y: gp.size.height * 0.2)
+                        .opacity(0.9)
+                }
+                    else {
+                        Image(current.author)
+                            .resizable()
+                            .frame(width: gp.size.width * 0.5, height: gp.size.height * 0.3, alignment: .topTrailing)
+                            .aspectRatio(1, contentMode: .fit)
+                            .cornerRadius(15.0)
+                            .position(x: gp.size.width * 0.25, y: gp.size.height * 0.2)
+                            .opacity(0.9)
+                    }
                 }
                 Spacer()
                 VStack{
@@ -84,7 +110,6 @@ struct ContentView: View {
                             )
                         .foregroundColor(Color.white)
                         .frame(
-                            
                             maxWidth: (gp.size.width * 0.9),
                             maxHeight: (gp.size.height * 0.95),
                             alignment: .bottomLeading)
@@ -110,7 +135,14 @@ struct ContentView: View {
                         Button(idleTimerDisabled ? "Frame Mode On" : "Frame Mode Off")
                         {
                             idleTimerDisabled.toggle()
+                            if (idleTimerDisabled && shownPopup) {
+                                showPopup = true
+                            }
                         }
+                        .confirmationDialog("", isPresented: $showPopup) {
+                                Button("Screen will now Stay On", role: .destructive, action: {
+                                    shownPopup = false })
+                              }
                         Spacer()
                         Button(action: goForward){
                             Image(systemName: "arrowtriangle.right.fill")
@@ -142,6 +174,20 @@ struct ContentView: View {
         
     }
     
+}
+
+extension Image {
+    @warn_unqualified_access
+    func square() -> some View {
+        Rectangle()
+            .aspectRatio(1, contentMode: .fit)
+            .overlay(
+                self
+                    .resizable()
+                    .scaledToFill()
+            )
+            .clipShape(Rectangle())
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

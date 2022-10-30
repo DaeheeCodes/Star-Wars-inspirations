@@ -50,5 +50,6 @@ import SwiftUI
             }
         }
         dataTask.resume()
+        
  }
 }
