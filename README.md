@@ -1,6 +1,8 @@
 # Inspirations - Star Wars Edition
 #### By Daehee Hwang
 
+<img width="1281" alt="Screen Shot 2022-10-30 at 1 22 50 AM" src="https://user-images.githubusercontent.com/102007615/198869372-19aeb429-17ec-4690-929c-81f19329676c.png">
+
 
 ----------------------
 ## Mission
