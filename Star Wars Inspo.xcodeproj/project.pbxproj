@@ -19,7 +19,25 @@
 		EBBB53F52909AAE2008FC99F /* ImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F42909AAE2008FC99F /* ImgModel.swift */; };
 		EBBB53F7290A2E5F008FC99F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53F6290A2E5E008FC99F /* Config.xcconfig */; };
 		EBBB53FA290B67BF008FC99F /* SlidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */; };
+		EBDF60A3290E79B500661036 /* Star_Wars_InspoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDF60A2290E79B500661036 /* Star_Wars_InspoTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBDF6096290E779900661036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBBB53C529086E46008FC99F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBBB53CC29086E46008FC99F;
+			remoteInfo = "Star Wars Inspo";
+		};
+		EBDF60A4290E79B500661036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBBB53C529086E46008FC99F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBBB53CC29086E46008FC99F;
+			remoteInfo = "Star Wars Inspo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EBBB53CD29086E46008FC99F /* Star Wars Inspo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Wars Inspo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +54,27 @@
 		EBBB53F6290A2E5E008FC99F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		EBBB53F8290A3272008FC99F /* Star-Wars-Inspo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Star-Wars-Inspo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesViewModel.swift; sourceTree = "<group>"; };
+		EBDF6092290E779900661036 /* Star Wars InspoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Wars InspoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDF60A0290E79B500661036 /* Star Wars InspoTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Wars InspoTest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDF60A2290E79B500661036 /* Star_Wars_InspoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Wars_InspoTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EBBB53CA29086E46008FC99F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDF608F290E779900661036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDF609D290E79B500661036 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +90,7 @@
 				EBBB53F6290A2E5E008FC99F /* Config.xcconfig */,
 				EBBB53EE2908BE3E008FC99F /* README.md */,
 				EBBB53CF29086E46008FC99F /* Star Wars Inspo */,
+				EBDF60A1290E79B500661036 /* Star Wars InspoTest */,
 				EBBB53CE29086E46008FC99F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				EBBB53CD29086E46008FC99F /* Star Wars Inspo.app */,
+				EBDF6092290E779900661036 /* Star Wars InspoTests.xctest */,
+				EBDF60A0290E79B500661036 /* Star Wars InspoTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +131,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EBDF60A1290E79B500661036 /* Star Wars InspoTest */ = {
+			isa = PBXGroup;
+			children = (
+				EBDF60A2290E79B500661036 /* Star_Wars_InspoTest.swift */,
+			);
+			path = "Star Wars InspoTest";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +159,42 @@
 			productReference = EBBB53CD29086E46008FC99F /* Star Wars Inspo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EBDF6091290E779900661036 /* Star Wars InspoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBDF6098290E779900661036 /* Build configuration list for PBXNativeTarget "Star Wars InspoTests" */;
+			buildPhases = (
+				EBDF608E290E779900661036 /* Sources */,
+				EBDF608F290E779900661036 /* Frameworks */,
+				EBDF6090290E779900661036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBDF6097290E779900661036 /* PBXTargetDependency */,
+			);
+			name = "Star Wars InspoTests";
+			productName = "Star Wars InspoTests";
+			productReference = EBDF6092290E779900661036 /* Star Wars InspoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBDF609F290E79B500661036 /* Star Wars InspoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBDF60A6290E79B500661036 /* Build configuration list for PBXNativeTarget "Star Wars InspoTest" */;
+			buildPhases = (
+				EBDF609C290E79B500661036 /* Sources */,
+				EBDF609D290E79B500661036 /* Frameworks */,
+				EBDF609E290E79B500661036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBDF60A5290E79B500661036 /* PBXTargetDependency */,
+			);
+			name = "Star Wars InspoTest";
+			productName = "Star Wars InspoTest";
+			productReference = EBDF60A0290E79B500661036 /* Star Wars InspoTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +207,14 @@
 				TargetAttributes = {
 					EBBB53CC29086E46008FC99F = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					EBDF6091290E779900661036 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = EBBB53CC29086E46008FC99F;
+					};
+					EBDF609F290E79B500661036 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = EBBB53CC29086E46008FC99F;
 					};
 				};
 			};
@@ -142,6 +232,8 @@
 			projectRoot = "";
 			targets = (
 				EBBB53CC29086E46008FC99F /* Star Wars Inspo */,
+				EBDF6091290E779900661036 /* Star Wars InspoTests */,
+				EBDF609F290E79B500661036 /* Star Wars InspoTest */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +248,20 @@
 				EBBB53D529086E49008FC99F /* Assets.xcassets in Resources */,
 				EBBB53EF2908BE3E008FC99F /* README.md in Resources */,
 				EBBB53DF29086F5F008FC99F /* Database.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDF6090290E779900661036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDF609E290E79B500661036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +282,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBDF608E290E779900661036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDF609C290E79B500661036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDF60A3290E79B500661036 /* Star_Wars_InspoTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBDF6097290E779900661036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBBB53CC29086E46008FC99F /* Star Wars Inspo */;
+			targetProxy = EBDF6096290E779900661036 /* PBXContainerItemProxy */;
+		};
+		EBDF60A5290E79B500661036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBBB53CC29086E46008FC99F /* Star Wars Inspo */;
+			targetProxy = EBDF60A4290E79B500661036 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EBBB53D929086E49008FC99F /* Debug */ = {
@@ -359,6 +493,78 @@
 			};
 			name = Release;
 		};
+		EBDF6099290E779900661036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 294AAF9P9D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starryfields.com.Star-Wars-InspoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Wars Inspo.app/Star Wars Inspo";
+			};
+			name = Debug;
+		};
+		EBDF609A290E779900661036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 294AAF9P9D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starryfields.com.Star-Wars-InspoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Wars Inspo.app/Star Wars Inspo";
+			};
+			name = Release;
+		};
+		EBDF60A7290E79B500661036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 294AAF9P9D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starryfields.com.Star-Wars-InspoTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Wars Inspo.app/Star Wars Inspo";
+			};
+			name = Debug;
+		};
+		EBDF60A8290E79B500661036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 294AAF9P9D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "starryfields.com.Star-Wars-InspoTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Wars Inspo.app/Star Wars Inspo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -376,6 +582,24 @@
 			buildConfigurations = (
 				EBBB53DC29086E49008FC99F /* Debug */,
 				EBBB53DD29086E49008FC99F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBDF6098290E779900661036 /* Build configuration list for PBXNativeTarget "Star Wars InspoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBDF6099290E779900661036 /* Debug */,
+				EBDF609A290E779900661036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBDF60A6290E79B500661036 /* Build configuration list for PBXNativeTarget "Star Wars InspoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBDF60A7290E79B500661036 /* Debug */,
+				EBDF60A8290E79B500661036 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

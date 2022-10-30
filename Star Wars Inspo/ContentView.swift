@@ -19,7 +19,6 @@ struct ContentView: View {
     @State var showMenu: Bool = true
     @Environment(\.scenePhase) private var scenePhase
 
-
     //Feeds to the toggler to disable or enable idleTimerDisabled which allows users to force the phone to stay awake.
     func idleTimer() {
         idleTimerDisabled ? (UIApplication.shared.isIdleTimerDisabled = true) : (UIApplication.shared.isIdleTimerDisabled = false)
