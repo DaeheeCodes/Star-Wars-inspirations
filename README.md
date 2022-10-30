@@ -12,7 +12,7 @@ The main focus of the project was to build an application that follows the SOLID
 
 ## Core Project
 
-This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorhythms.
+This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorithm.
 
 It also thinks about the users first by implementing UI/UX that is easy to understand and easy to maintain. For example, the application provides the user with an option to keep the screen from going to sleep by putting the application on "Frame Mode", when this is turned on it alerts the user that the screen will not be maintained on. 
 
@@ -24,7 +24,6 @@ Pixel perfect alignment and framinging is provided for different device (iPad vs
 
 Application uses common naming convention to conform to the accessibility features of the iOS. 
 
-Each units of the functions is also tested at each phase of the process.
 
 The following is a breakdown of the project.
 
@@ -43,8 +42,8 @@ The following is a breakdown of the project.
     *    Hideable UI that collapses out of frame on click of the screen
     *    GeometryReader allows adaptible view orientation based on the screen size (Landscape, iPad, iPhone)
     *    func timer reads the transition time frm JSON and executes when it expires
-    *    lifecylce events triggered on active and on background
-    *    cache is cleared on sleep and the UI resets on active again
+    *    lifecycle events triggered on active and on going into background
+    *    cache is cleared on sleep and the UI resets on active.
 
 ## Reference
 https://swdevnotes.com/swift/2022/read-json-with-codeable-in-swift/
