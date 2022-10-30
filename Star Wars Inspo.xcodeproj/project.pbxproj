@@ -16,7 +16,7 @@
 		EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53EA29089ECA008FC99F /* DataManager.swift */; };
 		EBBB53EF2908BE3E008FC99F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53EE2908BE3E008FC99F /* README.md */; };
 		EBBB53F12909A5B0008FC99F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F02909A5B0008FC99F /* NetworkManager.swift */; };
-		EBBB53F52909AAE2008FC99F /* imgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F42909AAE2008FC99F /* imgModel.swift */; };
+		EBBB53F52909AAE2008FC99F /* ImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F42909AAE2008FC99F /* ImgModel.swift */; };
 		EBBB53F7290A2E5F008FC99F /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EBBB53F6290A2E5E008FC99F /* Config.xcconfig */; };
 		EBBB53FA290B67BF008FC99F /* SlidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,7 @@
 		EBBB53EA29089ECA008FC99F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EBBB53EE2908BE3E008FC99F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBBB53F02909A5B0008FC99F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		EBBB53F42909AAE2008FC99F /* imgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgModel.swift; sourceTree = "<group>"; };
+		EBBB53F42909AAE2008FC99F /* ImgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgModel.swift; sourceTree = "<group>"; };
 		EBBB53F6290A2E5E008FC99F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		EBBB53F8290A3272008FC99F /* Star-Wars-Inspo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Star-Wars-Inspo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesViewModel.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 				EBBB53E229088E3F008FC99F /* SlidesModel.swift */,
 				EBBB53EA29089ECA008FC99F /* DataManager.swift */,
 				EBBB53F02909A5B0008FC99F /* NetworkManager.swift */,
-				EBBB53F42909AAE2008FC99F /* imgModel.swift */,
+				EBBB53F42909AAE2008FC99F /* ImgModel.swift */,
 				EBBB53F9290B67BF008FC99F /* SlidesViewModel.swift */,
 			);
 			path = "Star Wars Inspo";
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBB53E329088E3F008FC99F /* SlidesModel.swift in Sources */,
-				EBBB53F52909AAE2008FC99F /* imgModel.swift in Sources */,
+				EBBB53F52909AAE2008FC99F /* ImgModel.swift in Sources */,
 				EBBB53EB29089ECA008FC99F /* DataManager.swift in Sources */,
 				EBBB53FA290B67BF008FC99F /* SlidesViewModel.swift in Sources */,
 				EBBB53F12909A5B0008FC99F /* NetworkManager.swift in Sources */,

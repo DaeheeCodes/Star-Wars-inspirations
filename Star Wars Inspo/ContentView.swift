@@ -164,6 +164,7 @@ struct ContentView: View {
                 
             }
         }.onReceive(timer) {
+            //Slide Looper
             time in
             print(counter - 1)
             if (counter + 1 == (slideShows.slidesModel.count)) {
@@ -180,9 +181,10 @@ struct ContentView: View {
                 URLCache.shared.removeAllCachedResponses()
                 URLCache.shared.diskCapacity = 0
                 URLCache.shared.memoryCapacity = 0
+                //Turn Permanent Frame Mode Off on Sleep
+                idleTimerDisabled = false
             }
             //Show warning again if the user session was previously ended.
-            
             if phase == .active {
                 notShownPopup = true
             }
