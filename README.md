@@ -14,9 +14,9 @@ The main focus of the project was to build an application that follows the SOLID
 
 This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorithm.
 
-It also thinks about the users first by implementing UI/UX that is easy to understand and easy to maintain. For example, the application provides the user with an option to keep the screen from going to sleep by putting the application on "Frame Mode", when this is turned on it alerts the user that the screen will not be maintained on. 
+It also thinks about the users first by implementing UI/UX that is easy to understand and easy to maintain. For example, the application provides the user with an option to keep the screen from going to sleep by putting the application on "Frame Mode", when this is turned on it alerts the user that the screen will now be maintained on. 
 
-Furthermore, when users put the application on background state, the Frame Mode turns off and alerts the user again when user activates the application again and turns the Frame Mode on again, the alert is only once per session.
+Furthermore, when users put the application on background state the Frame Mode turns off and alerts the user again when user activates the application again and turns the Frame Mode on again, the alert is only once per session.
 
 Users can also hide the UI to give it a Frame like view.
 
