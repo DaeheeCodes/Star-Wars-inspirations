@@ -1,20 +1,22 @@
 # Inspirations - Star Wars Edition
 #### By Daehee Hwang
 
+<img width="1281" alt="Screen Shot 2022-10-30 at 1 22 50 AM" src="https://user-images.githubusercontent.com/102007615/198869372-19aeb429-17ec-4690-929c-81f19329676c.png">
+
 
 ----------------------
 ## Mission
 My mission was to develop a professional application that is able to read a JSON database and represent that as slideshow.
 
-The main focus of the project was to build an application that follows the SOLID principle to deliver an package that is extensible and maintainable
+The main focus of the project was to build an application that delivers a package that is extensible and maintainable.
 
 ## Core Project
 
-This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorhythms.
+This seemingly simple project is broken down into its smallest units and provides an array of reuseable functions and algorithm.
 
-It also thinks about the users first by implementing UI/UX that is easy to understand and easy to maintain. For example, the application provides the user with an option to keep the screen from going to sleep by putting the application on "Frame Mode", when this is turned on it alerts the user that the screen will not be maintained on. 
+It also thinks about the users first by implementing UI/UX that is easy to understand and easy to maintain. For example, the application provides the user with an option to keep the screen from going to sleep by putting the application on "Frame Mode", when this is turned on it alerts the user that the screen will now be maintained on. 
 
-Furthermore, when users put the application on background state, the Frame Mode turns off and alerts the user again when user activates the application again and turns the Frame Mode on again, the alert is only once per session.
+Furthermore, when users put the application on background state the Frame Mode turns off and alerts the user again when user activates the application again and turns the Frame Mode on again, the alert is only once per session.
 
 Users can also hide the UI to give it a Frame like view.
 
@@ -22,7 +24,6 @@ Pixel perfect alignment and framinging is provided for different device (iPad vs
 
 Application uses common naming convention to conform to the accessibility features of the iOS. 
 
-Each units of the functions is also tested at each phase of the process.
 
 The following is a breakdown of the project.
 
@@ -41,10 +42,11 @@ The following is a breakdown of the project.
     *    Hideable UI that collapses out of frame on click of the screen
     *    GeometryReader allows adaptible view orientation based on the screen size (Landscape, iPad, iPhone)
     *    func timer reads the transition time frm JSON and executes when it expires
-    *    lifecylce events triggered on active and on background
-    *    cache is cleared on sleep and the UI resets on active again
+    *    lifecycle events triggered on active and on going into background
+    *    cache is cleared on sleep and the UI resets on active.
 
 ## Reference
+https://unsplash.com/developers
 https://swdevnotes.com/swift/2022/read-json-with-codeable-in-swift/
 https://www.hackingwithswift.com/books/ios-swiftui/triggering-events-repeatedly-using-a-timer
 

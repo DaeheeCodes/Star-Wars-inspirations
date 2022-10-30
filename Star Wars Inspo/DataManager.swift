@@ -12,9 +12,12 @@ class DataManager: ObservableObject {
     @Published var slidesModel = [SlidesModel]()
     
     
+    
     init() {
+        // Plug in whatever database
         loadJSON(loadData("Database")!, [SlidesModel].self)
     }
+    
     //Uses units of small functions for scaleability and accessibility.
     // For example we can feed any filename to loadData on any other databases if we were to scale for different themes.
     func loadData(_ filename: String) -> Data? {
@@ -30,6 +33,7 @@ class DataManager: ObservableObject {
             fatalError("Failed to load \"\(filename)\" from main bundle:\n\(error)")
         }
     }
+    
     
     
     func loadJSON<T: Codable>(_ data: Data,_ model: T.Type){

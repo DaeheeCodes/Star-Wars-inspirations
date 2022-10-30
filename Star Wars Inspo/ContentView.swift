@@ -177,6 +177,7 @@ struct ContentView: View {
             //Release Network Cache when it goes to background.
         }.onChange(of: scenePhase) { phase in
             if phase == .background {
+                //Release memory
                 URLCache.shared.removeAllCachedResponses()
                 URLCache.shared.diskCapacity = 0
                 URLCache.shared.memoryCapacity = 0

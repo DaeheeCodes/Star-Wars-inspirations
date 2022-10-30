@@ -16,6 +16,7 @@ import SwiftUI
     @Published var imageModels = [imgModel]()
     //Publish Image Data
     
+    //ENV file is synced with my Xcode profile so i provided one directly on the URL so you dont have too sync it yourself.
     let apiKey = Bundle.main.object(forInfoDictionaryKey: "UNSPLASH_API") as! String
     
     init() {
@@ -25,7 +26,9 @@ import SwiftUI
     //units of small functions for scaleability and accessibility.
     // for example we can expand loadData to any other databases if we were to scale for different themes.
     func fetchImg(_ query: String) {
-        guard let url = URL(string: "https://api.unsplash.com/collections/\(query)/photos?client_id=\(apiKey)" )
+        //ENV file is synced with my Xcode profile so i provided one directly on the URL so you dont have too sync it yourself.
+        guard let url = URL(string:
+                                "https://api.unsplash.com/collections/\(query)/photos?client_id=1D1wmDROSEx9jh7G7H6dY7bp_ijAiAc-r8bWSWSliLo" )
         else {
             //allows us to catch specific error statements, better than the standar JSON decoding method
             fatalError("Invalid URL at \"\(query)\" .")

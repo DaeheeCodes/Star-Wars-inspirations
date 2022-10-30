@@ -33,9 +33,9 @@ class Star_Wars_InspoTest: XCTestCase {
 
           "quote": "Do. Or do not. There is no try.",
 
-          "author": "Yoda",
+          "author": "Daehee",
 
-          "slideTransitionDelay": 20
+          "slideTransitionDelay": 9999999
 
         }
       ]
@@ -44,7 +44,7 @@ class Star_Wars_InspoTest: XCTestCase {
       let slide = try! JSONDecoder().decode([SlidesModel].self, from: json)
       
         XCTAssertNotNil(slide)
-        XCTAssertEqual(slide.first?.author, "Yoda")
+        XCTAssertEqual(slide.first?.author, "Daehee")
+        XCTAssertEqual(slide.first?.slideTransitionDelay, 9999999)
      }
-
 }
