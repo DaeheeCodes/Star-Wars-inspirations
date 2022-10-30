@@ -24,6 +24,7 @@ Pixel perfect alignment and framinging is provided for different device (iPad vs
 
 Application uses common naming convention to conform to the accessibility features of the iOS. 
 
+Unit tests are also provided for the DataManagers
 
 The following is a breakdown of the project.
 
